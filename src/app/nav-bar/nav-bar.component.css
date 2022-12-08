@@ -1,0 +1,21 @@
+.cart-no{
+    position: absolute;
+    min-height:25px;
+    min-width:25px;
+    border-radius: 50%;
+    font-size: 1em;
+    background-color: rgb(123, 0, 255);
+    color: white;
+    text-align: center;
+    top: -12;
+    right: 32;
+
+}
+.wrap{
+    position: relative;
+    display: inline-block;
+}
+nav{
+    margin-left:30%;
+    margin-right:30%
+}
