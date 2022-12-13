@@ -1,4 +1,6 @@
 .cart-no{
+    margin-top: -50px;
+    margin-left:25px;
     position: absolute;
     min-height:25px;
     min-width:25px;
@@ -7,13 +9,14 @@
     background-color: rgb(123, 0, 255);
     color: white;
     text-align: center;
-    top: -12;
-    right: 32;
 
+}
+.fa-shopping-cart{
+    margin-right: 30px;
 }
 .wrap{
     position: relative;
-    display: inline-block;
+   
 }
 nav{
     margin-left:30%;
