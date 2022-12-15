@@ -2,7 +2,14 @@
   class="d-flex flex-column flex-md-row align-items-center justify-content-center pb-3 mb-4 border-bottom shadow-sm"
 >
   <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-    <img [routerLink]="['/']" src="assets/images/logo.png" alt="logo" width="200" height="102" class="logo"/>
+    <img
+      [routerLink]="['/']"
+      src="assets/images/logo.png"
+      alt="logo"
+      width="200"
+      height="102"
+      class="logo"
+    />
   </a>
 
   <nav class="mt-2 mt-md-0 ms-md-auto text-uppercase" style="font-size: larger">
@@ -10,7 +17,7 @@
       class="me-3 py-2"
       [routerLink]="['/']"
       routerLinkActive="active"
-      [routerLinkActiveOptions]="{exact: true}"
+      [routerLinkActiveOptions]="{ exact: true }"
       >Home</a
     >
     <a
@@ -20,12 +27,8 @@
       href="#"
       >Shop</a
     >
-    <a
-      class="me-3 py-2"
-      [routerLink]="['/']"
-      routerLinkActive="active"
-      href="#"
-      >Contact</a
+    <a class="me-3 py-2" routerLinkActive="active" [routerLink]="['test-error']"
+      >Errors</a
     >
   </nav>
   <div class="d-flex align-items-center">

@@ -21,7 +21,7 @@ export class ShopComponent {
     { name: 'Price: Low to High', value: 'priceAsc' },
     { name: 'Price: High to Low', value: 'priceDesc' },
   ];
-  @ViewChild('search', { static: true }) searchTerm!: ElementRef;
+  @ViewChild('search', { static: false }) searchTerm!: ElementRef;
   constructor(private shopService: ShopService) {}
   ngOnInit() {
     this.getBrands();
