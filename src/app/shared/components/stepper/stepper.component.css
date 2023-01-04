@@ -1,0 +1,17 @@
+button.nav-link{
+    background: #e9ecef;
+    border-radius:0;
+    border:none;
+}
+button.nav-link.active:hover{
+    color: #fff;
+}
+button.nav-link:focus{
+    outline:none
+}
+button.nav-link:active{
+    outline:none
+}
+button.nav-link.active:focus{
+    outline:none
+}

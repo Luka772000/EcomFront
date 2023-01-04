@@ -7,99 +7,11 @@
       <div class="container">
         <div class="row">
           <div class="col-12 py-5 mb-1">
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th class="border-0 bg-light" scope="col">
-                      <div class="p-2 px-3 text-uppercase">Product</div>
-                    </th>
-                    <th scope="col" class="border-0 bg-light">
-                      <div class="py-2 text-uppercase">Price</div>
-                    </th>
-                    <th scope="col" class="border-0 bg-light">
-                      <div class="py-2 text-uppercase">Quantity</div>
-                    </th>
-                    <th scope="col" class="border-0 bg-light">
-                      <div class="py-2 text-uppercase">Total</div>
-                    </th>
-                    <th scope="col" class="border-0 bg-light">
-                      <div class="py-2 text-uppercase">Remove</div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let item of (basket$ | async).items">
-                    <th scope="row" class="border-0">
-                      <div class="p-2">
-                        <img
-                          src="{{ item.pictureUrl }}"
-                          alt="{{ item.productName }}"
-                          width="60"
-                          class="img-fluid rounded shadow-sm"
-                        />
-                        <div class="ml-3 d-inline-block align-middle">
-                          <h5 class="mb-0">
-                            <a
-                              routerLink="/shop/{{ item.id }}"
-                              class="text-dark d-inline-block align-middle"
-                            >
-                              {{ item.productName }}
-                            </a>
-                          </h5>
-                          <span
-                            class="text-muted font-weight-normal font-italic d-block"
-                          >
-                            Type: {{ item.type }}
-                          </span>
-                        </div>
-                      </div>
-                    </th>
-                    <td class="border-0 align-middle">
-                      <strong>{{ item.price | currency }}</strong>
-                    </td>
-                    <td class="border-0 align-middle">
-                      <div class="d-flex align-items-center">
-                        <i
-                          (click)="decrementItemQuantity(item)"
-                          class="fa fa-minus-circle text-warning"
-                          style="
-                            cursor: pointer;
-                            font-size: 2em;
-                            margin-right: 4px;
-                          "
-                        >
-                        </i>
-                        <strong>{{ item.quantity }}</strong>
-                        <i
-                          (click)="incrementItemQuantity(item)"
-                          class="fa fa-plus-circle text-warning"
-                          style="
-                            cursor: pointer;
-                            font-size: 2em;
-                            margin-left: 4px;
-                          "
-                        >
-                        </i>
-                      </div>
-                    </td>
-                    <td class="border-0 align-middle">
-                      <strong>{{
-                        item.price * item.quantity | currency
-                      }}</strong>
-                    </td>
-                    <td class="border-0 align-middle">
-                      <button
-                        (click)="removeBasketItem(item)"
-                        class="btn btn-danger"
-                      >
-                        <i class="fa fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <app-basket-sumary
+              (decrement)="decrementItemQuantity($event)"
+              (increment)="incrementItemQuantity($event)"
+              (remove)="removeItemFromBasket($event)"
+            ></app-basket-sumary>
           </div>
         </div>
         <div class="row">
