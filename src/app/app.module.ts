@@ -13,6 +13,7 @@ import { HomeModule } from './home/home.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptors';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
+import { OrderListComponent } from './order/order-list/order-list.component';
 
 @NgModule({
   declarations: [AppComponent],
