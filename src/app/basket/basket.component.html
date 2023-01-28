@@ -10,7 +10,7 @@
             <app-basket-sumary
               (decrement)="decrementItemQuantity($event)"
               (increment)="incrementItemQuantity($event)"
-              (remove)="removeItemFromBasket($event)"
+              (remove)="removeBasketItem($event)"
               [items]="(basket$ | async).items"
             ></app-basket-sumary>
           </div>

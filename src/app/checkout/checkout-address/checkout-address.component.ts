@@ -20,6 +20,7 @@ export class CheckoutAddressComponent implements OnInit {
       .subscribe(
         (address) => {
           this.toastr.success('Address saved');
+          this.checkoutForm.get('addressForm').reset(address);
         },
         (error) => {
           this.toastr.error(error.message);
