@@ -47,7 +47,7 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.stripe = Stripe(
-      'pk_test_51MHnRWGK9tKNQ3aOISPbnPLeiFBu7F2vjkjUirA2tHfm39FngH25sEHgldAcVW8ID2dh32YiVTrJOFTJhvcNWXAy00urzJHP2U'
+      'pk_test_51MNEIlDOSooAMGdQRI7K9KJTaDHyxv5ZVxeJvpAJLDwBp0E1gJW4Y4SaHPhcuKtS9cfGJFRsIjkX5lFGI9vbo4EW00WrbTSC5j'
     );
     const elements = this.stripe.elements();
 
@@ -98,13 +98,17 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
 
     if (paymentResult.paymentIntent) {
       this.basketService.deleteBasket(basket);
+      console.log("greska1");
       const navigationExtras: NavigationExtras = { state: this.createOrder };
       this.router.navigate(['checkout/success'], navigationExtras);
     } else {
+      console.log("greska");
+      console.log(paymentResult.error.message);
       this.toastrService.error(paymentResult.error.message);
     }
     this.loading = false;
     } catch (error) {
+      
       console.log(error); 
       this.loading = false;
     }
