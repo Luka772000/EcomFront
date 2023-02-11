@@ -1,20 +1,23 @@
 <div class="d-flex justify-content-center mt-5">
   <div class="col-3">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <h1 class="h3 mb-3 fw-normal text-center">Prijavite se</h1>
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+      </div>
+
       <app-text-input
         formControlName="email"
-        [label]="'Email adresa'"
+        [label]="'Email Address'"
       ></app-text-input>
-      <br />
       <app-text-input
         formControlName="password"
-        [label]="'Lozinka'"
+        [label]="'Password'"
         [type]="'password'"
       ></app-text-input>
+
       <button
         [disabled]="loginForm.invalid"
-        class="w-100 btn btn-lg btn-primary"
+        class="btn btn-lg btn-primary btn-block"
         type="submit"
       >
         Sign in

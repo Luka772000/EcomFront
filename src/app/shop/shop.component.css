@@ -16,6 +16,7 @@
 }
 .list-group-item:not(.active):hover{
     color:#fff;
-    background-color: #e95620c0;
+    background-color: #353535c0;
     border-radius:10px;
+    transition: 0.5s;
 }

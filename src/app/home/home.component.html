@@ -1,18 +1,32 @@
-<carousel>
-    <slide>
-        <img src="assets/images/hero1.jpg" alt="First slide" style="display:block;width:100%">
-    </slide>
-    <slide>
-        <img src="assets/images/hero2.jpg" alt="First slide" style="display:block;width:100%">
-    </slide>
-    <slide>
-        <img src="assets/images/hero3.jpg" alt="First slide" style="display:block;width:100%">
-    </slide>
-</carousel>
-<section class="featured">
-    <div class="d-flex justify-content-center pt-4">
-        <h1>
-            Welcome to the Shop!
-        </h1>
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/images/hero1.jpg" alt="Random first slide" />
     </div>
+    <div class="carousel-caption">
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/images/hero2.jpg" alt="Random second slide" />
+    </div>
+    <div class="carousel-caption">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/images/hero3.jpg" alt="Random third slide" />
+    </div>
+    <div class="carousel-caption">
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<section class="featured">
+  <div class="d-flex justify-content-center pt-4">
+    <h1>Welcome to the Shop!</h1>
+  </div>
 </section>

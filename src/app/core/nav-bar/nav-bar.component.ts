@@ -22,5 +22,6 @@ export class NavBarComponent implements OnInit {
   logout(){
     this.accService.logOut();
   }
+  
 
 }

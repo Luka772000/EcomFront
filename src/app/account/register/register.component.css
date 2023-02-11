@@ -1,0 +1,11 @@
+button{
+    width:50%;
+    height:80px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+app-text-input{
+    color:gray
+}

@@ -4,16 +4,16 @@
       <thead [class.thead-light]="isBasket || isOrder" class="border-0 py-2">
         <tr>
           <th scope="col">
-            <div class="p-2 px-3 text-uppercase">Artikal</div>
+            <div class="p-2 px-3 text-uppercase">Product</div>
           </th>
           <th scope="col">
-            <div class="py-2 text-uppercase">Cijena</div>
+            <div class="py-2 text-uppercase">Price</div>
           </th>
           <th scope="col">
-            <div class="py-2 text-uppercase">Količina</div>
+            <div class="py-2 text-uppercase">Quantity</div>
           </th>
           <th scope="col">
-            <div class="py-2 text-uppercase">Ukupna cijena</div>
+            <div class="py-2 text-uppercase">Price</div>
           </th>
           <th *ngIf="isBasket" scope="col" class="border-0">
             <div class="py-2 text-uppercase">Remove</div>
@@ -30,8 +30,8 @@
                 class="img-fluid"
                 style="max-height: 50px"
               />
-              <div class="ml-3 d-inline-block align-middle">
-                <h5 class="mb-0">
+              <div class="tekstic d-inline-block align-middle">
+                <h5 class="mb-0 ">
                   <a routerLink="/shop/{{ item.id }}" class="text-dark">{{
                     item.productName
                   }}</a>

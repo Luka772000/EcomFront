@@ -12,6 +12,7 @@ import { CdkStepperModule } from '@angular/cdk/stepper';
 import { StepperComponent } from './components/stepper/stepper.component';
 import { BasketSumaryComponent } from './components/basket-sumary/basket-sumary.component';
 import { RouterModule } from '@angular/router';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     PagingHeaderComponent,
@@ -43,7 +44,8 @@ import { RouterModule } from '@angular/router';
     CdkStepperModule,
     StepperComponent,
     BasketSumaryComponent,
-    FormsModule
+    FormsModule,
+    NgbCarouselModule
   ]
 })
 export class SharedModule { }

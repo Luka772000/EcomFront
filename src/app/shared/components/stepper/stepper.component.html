@@ -8,7 +8,7 @@
           [disabled]="true"
           class="nav-link py-3 text-uppercase font-weight-bold btn-block"
         >
-          {{ step.label }}: {{ step.completed }}
+          {{ step.label }}  <i class="fa fa-check"  *ngIf="step.completed"></i>
         </button>
       </div>
     </li>

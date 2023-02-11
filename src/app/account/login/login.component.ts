@@ -19,9 +19,10 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.createLoginForm();
     this.returnUrl =
       this.activatedRoute.snapshot.queryParams['returnUrl'] || '/shop';
-    this.createLoginForm();
+    
   }
 
   createLoginForm() {

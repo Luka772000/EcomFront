@@ -2,18 +2,16 @@
   <div class="row">
     <section class="col-3">
       <ng-container *ngIf="types && brands">
-        <h5 class="text-warning ml-3 mt-5">Sort</h5>
+        <h5 class="text ml-3 mt-5">Sort</h5>
         <select
           class="custom-select mb-3"
-          name=""
-          id=""
           (change)="onSortSelected($event.target.value)"
         >
           <option *ngFor="let sort of sortOptions" [value]="sort.value" [selected]="shopParams.sort === sort.value">
             {{ sort.name }}
           </option>
         </select>
-        <h5 class="text-warning ml-3">Brands</h5>
+        <h5 class="text ml-3">Brands</h5>
         <ul class="list-group my-3">
           <li
             class="list-group-item"
@@ -25,7 +23,7 @@
             {{ brand.name }}
           </li>
         </ul>
-        <h5 class="text-warning ml-3">Types</h5>
+        <h5 class="text ml-3">Types</h5>
         <ul class="list-group my-3">
           <li
             class="list-group-item"

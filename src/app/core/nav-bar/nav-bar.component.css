@@ -29,5 +29,8 @@ a{
 
 }
 a.active{
-    color: orange
+    color: orange;
+}
+a:hover{
+    color:rgb(255, 188, 30)
 }
